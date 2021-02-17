@@ -22,7 +22,7 @@ export class ConcordiaClient {
     }
 
     registerHandler(handler: AbstractHandler) {
-
+        return handler.register(this.wsManager);
     }
 
     registerPlugin(plugin: ClientPlugin) {
