@@ -1,0 +1,25 @@
+{
+  "name": "concordia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TotoTheDragon/Concordia.git"
+  },
+  "author": "DeveloperDragon <mrdragonplays2683@gmail.com> (http://developerdragon.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TotoTheDragon/Concordia/issues"
+  },
+  "homepage": "https://github.com/TotoTheDragon/Concordia#readme",
+  "dependencies": {
+    "@developerdragon/dragoncordapi": "^1.0.11",
+    "@types/node": "^14.14.28",
+    "@types/ws": "^7.4.0",
+    "ws": "^7.4.3"
+  },
+}
