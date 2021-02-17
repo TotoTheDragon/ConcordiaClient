@@ -2,7 +2,7 @@ import { MessagePayload } from "@developerdragon/dragoncordapi";
 import { ConcordiaClient } from "../client";
 import { WebsocketManager } from "../WebsocketManager";
 
-export abstract class MessageHandler {
+export abstract class AbstractHandler {
 
     op: number = -1;
 

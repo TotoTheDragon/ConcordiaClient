@@ -1,9 +1,9 @@
 import { MessagePayload } from "@developerdragon/dragoncordapi";
 import { clearInterval } from "timers";
 import { ConcordiaClient } from "../client";
-import { MessageHandler } from "./AbstractHandler";
+import { AbstractHandler } from "./AbstractHandler";
 
-export class ConnectHandler extends MessageHandler {
+export class ConnectHandler extends AbstractHandler {
 
     op = 1;
 

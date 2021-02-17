@@ -1,19 +1,19 @@
 import { MessagePayload } from "@developerdragon/dragoncordapi";
 import { clearInterval } from "timers";
 import { ConcordiaClient } from "../client";
-import { MessageHandler } from "./AbstractHandler";
+import { AbstractHandler } from "./AbstractHandler";
 
-export class ErrorHandler extends MessageHandler {
+export class ErrorHandler extends AbstractHandler {
 
     op = -1;
 
     handle(client: ConcordiaClient, request: MessagePayload): void {
 
-        clearInterval(client.heartbeat);
+        clearInterval(client.wsManager.heartbeat);
 
-        client.ws = null;
+        client.wsManager.ws = null;
 
-        client.startReconnect();
+        client.wsManager.startReconnect();
 
     }
 }

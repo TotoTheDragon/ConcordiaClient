@@ -1,7 +1,7 @@
 import { MessagePayload } from "@developerdragon/dragoncordapi";
 import WebSocket, { Data } from "ws";
 import { ConcordiaClient } from "./client";
-import { MessageHandler } from "./handlers/AbstractHandler";
+import { AbstractHandler } from "./handlers/AbstractHandler";
 import { ConnectHandler } from "./handlers/ConnectHandler";
 
 export class WebsocketManager {
@@ -10,7 +10,7 @@ export class WebsocketManager {
 
     ws: WebSocket;
 
-    handlers: Map<number, MessageHandler>;
+    handlers: Map<number, AbstractHandler>;
 
     reconnectInterval: NodeJS.Timeout;
 
