@@ -12,6 +12,10 @@ export class PluginManager {
         this.registered = new Map();
     }
 
+    getPlugin<T extends ClientPlugin>(identifier: string): T {
+        return this.registered.get(identifier) as T;
+    }
+
     register(plugin: ClientPlugin) {
         if (this.registered.has(plugin.identifier)) throw Error("Tried to register a plugin that is already registered: " + plugin.identifier);
         plugin.initialize(this.client);
