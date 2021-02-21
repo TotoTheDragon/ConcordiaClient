@@ -3,6 +3,7 @@ import WebSocket, { Data } from "ws";
 import { ConcordiaClient } from "./client";
 import { AbstractHandler } from "./handlers/AbstractHandler";
 import { ConnectHandler } from "./handlers/ConnectHandler";
+import { ErrorHandler } from "./handlers/ErrorHandler";
 
 export class WebsocketManager {
 
@@ -26,7 +27,7 @@ export class WebsocketManager {
         /* Register client handlers */
         this.handlers = new Map();
         new ConnectHandler().register(this);
-
+        new ErrorHandler().register(this);
         /* Start connection */
         this.connect();
     }
