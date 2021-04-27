@@ -5,8 +5,10 @@ config()
 */
 
 export const DefaultConcordiaClientOptions: ConcordiaClientOptions = {
-    host: "localhost",
-    port: 7591,
+    host: process.env.CONCORDIA_MANAGER_HOST ?? "127.0.0.1",
+    port: process.env.CONCORDIA_MANAGER_PORT as unknown as number ?? 7591,
+    APIhost: process.env.CONCORDIA_API_HOST ?? "127.0.0.1",
+    APIport: process.env.CONCORDIA_API_PORT as unknown as number ?? 3000,
     shard: 0,
     shardCount: 1,
     token: process.env.CONCORDIA_CLIENT_TOKEN || null,
@@ -21,6 +23,8 @@ export const DefaultConcordiaClientOptions: ConcordiaClientOptions = {
 export interface ConcordiaClientOptions {
     host?: string,
     port?: number,
+    APIhost?: string,
+    APIport?: number,
     shard?: number | number[],
     shardCount?: number,
     token?: string,
