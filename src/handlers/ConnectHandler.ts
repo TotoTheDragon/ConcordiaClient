@@ -22,8 +22,9 @@ export class ConnectHandler extends AbstractHandler {
             op: 3,
             d: {
                 token: client.options.token,
-                shard: client.options.shard,
-                shardCount: client.options.shardCount
+                shard: client.options.shard ?? null,
+                shardCount: client.options.shardCount ?? null,
+                referenceID: client.options.referenceID
             },
             t: null,
             s: null
