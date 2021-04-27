@@ -4,7 +4,7 @@ const isObject = d => typeof d === 'object' && d !== null;
 export class Util {
 
     static mergeDefault(def: object, given: object): object {
-        if (!given) return def;
+        if (!given) return def ?? {};
         for (const key in def) {
             if (!has(given, key) || given[key] === undefined) {
                 given[key] = def[key];
