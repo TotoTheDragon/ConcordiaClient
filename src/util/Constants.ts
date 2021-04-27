@@ -9,7 +9,7 @@ export const DefaultConcordiaClientOptions: ConcordiaClientOptions = {
     port: 7591,
     shard: 0,
     shardCount: 1,
-    token: process.env.TOKEN || null,
+    token: process.env.CONCORDIA_CLIENT_TOKEN || null,
     logLevel: "info",
     referenceID: process.env.CONCORDIA_REFERENCE_ID ?? null
 }
