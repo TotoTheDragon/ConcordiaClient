@@ -21,4 +21,14 @@ export class PluginManager {
         plugin.initialize(this.client);
         this.registered.set(plugin.identifier, plugin);
     }
+
+    run(command: string, ...args: any[]): any {
+
+        const cmd = command.split(":");
+        let plugins = command.length > 1 ? cmd.shift() : undefined;
+
+        if (plugins === "*")
+            plugins = "";
+    }
+
 }
