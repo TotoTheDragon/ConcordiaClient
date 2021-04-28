@@ -1,29 +1,43 @@
 {
   "name": "@developerdragon/concordiaclient",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "npm version patch && shx rm -r lib/ && tsc"
+    "test": "ts-mocha src/test/*.ts",
+    "prepublish": "npm version patch && shx rm -rf lib/ && tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/TotoTheDragon/Concordia.git"
+    "url": "git+ssh://git@github.com/TotoTheDragon/ConcordiaClient.git"
   },
   "author": "DeveloperDragon <mrdragonplays2683@gmail.com> (http://developerdragon.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TotoTheDragon/Concordia/issues"
+    "url": "https://github.com/TotoTheDragon/ConcordiaClient/issues"
   },
-  "homepage": "https://github.com/TotoTheDragon/Concordia#readme",
+  "homepage": "https://github.com/TotoTheDragon/ConcordiaClient#readme",
   "dependencies": {
     "@developerdragon/dragoncordapi": "^1.0.11",
-    "@types/node": "^14.14.28",
+    "@types/eventemitter3": "^2.0.2",
     "@types/ws": "^7.4.0",
+    "dotenv": "^8.2.0",
+    "drip": "^1.4.0",
+    "eventemitter3": "^4.0.7",
+    "eventemitter3000": "^1.0.0",
+    "fast-event-emitter": "0.0.2",
+    "winston": "^3.3.3",
     "ws": "^7.4.3"
   },
   "devDependencies": {
+    "@types/benchmark": "^2.1.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.14.37",
+    "@types/winston": "^2.4.4",
+    "benchmark": "^2.1.4",
+    "mocha": "^8.3.2",
     "shx": "^0.3.3"
   }
 }

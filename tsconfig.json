@@ -11,6 +11,7 @@
             "DOM"
         ],
         "outDir": "lib",
+        "declaration": true,
         "strict": false,
         "strictFunctionTypes": false,
         "skipLibCheck": true,

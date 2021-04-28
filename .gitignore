@@ -1,4 +1,5 @@
 .VSCodeCounter/
 dist/
+lib/
 node_modules/
 *.env
